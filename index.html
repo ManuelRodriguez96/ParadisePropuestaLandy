@@ -267,43 +267,88 @@
     }
 
     /* Footer */
-    footer {
-      background: #2f7047;
-      color: #a3d68a;
-      padding: 40px 24px;
-      text-align: center;
-      font-size: 0.9rem;
-      font-family: 'Montserrat', sans-serif;
-    }
-    footer a {
-      color: #a3d68a;
-      margin: 0 12px;
-      font-weight: 600;
-    }
-    footer a:hover {
-      color: #fff;
-    }
+ .footer {
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-text, .hero-image {
-        flex: none;
-      }
-      .benefits {
-        grid-template-columns: 1fr;
-      }
-      .purchase form {
-        flex-direction: column;
-      }
-      .purchase input[type=number] {
-        width: 100%;
-        max-width: 200px;
-      }
-    }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #7cd77c;
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 6px 0;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #7cd77c;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-newsletter input[type="email"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+  background-color: #7cd77c;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: #6ac66a;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
   </style>
 </head>
 <body>
@@ -385,15 +430,37 @@
     </div>
   </section>
 
-  <footer>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>🌿 Paradise Shop México</h2>
+      <p>Productos premium derivados del cáñamo. Vive natural, vive en equilibrio.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Tienda</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Suscríbete</h4>
+      <form>
+        <input type="email" placeholder="Tu correo electrónico" required />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
     <p>&copy; 2025 Paradise Shop México. Todos los derechos reservados.</p>
-    <p>
-      Síguenos en
-      <a href="#" aria-label="Facebook">Facebook</a> |
-      <a href="#" aria-label="Instagram">Instagram</a> |
-      <a href="#" aria-label="Twitter">Twitter</a>
-    </p>
-  </footer>
+  </div>
+</footer>
+
 
 </body>
 </html>
