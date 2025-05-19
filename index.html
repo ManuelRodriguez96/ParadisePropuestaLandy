@@ -4,419 +4,394 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Paradise Shop México - Aceite de CBD Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
+    /* Reset */
+    *, *::before, *::after {
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
     body {
-      background-color: #f5f9f6;
-      color: #2a2a2a;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f0f7f4;
+      color: #333;
       line-height: 1.6;
     }
-
     a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* Contenedor general */
+    /* Contenedor principal */
     .container {
       max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
     /* Header */
     header {
-      background-color: #2a6f37;
-      color: white;
-      padding: 15px 0;
+      background: #2f7047;
+      color: #fff;
+      padding: 18px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
     header .logo {
+      font-weight: 700;
       font-size: 1.8rem;
-      font-weight: bold;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
     }
-
-    header nav a {
-      margin-left: 20px;
+    nav a {
+      margin-left: 28px;
       font-weight: 600;
-      color: white;
       transition: color 0.3s ease;
     }
-
-    header nav a:hover {
-      color: #a5d6a7;
+    nav a:hover {
+      color: #a0d8a3;
     }
-
-    .btn-buy {
-      background-color: #a5d6a7;
-      color: #2a6f37;
-      padding: 10px 20px;
-      border-radius: 25px;
+    .btn-primary {
+      background: #a3d68a;
+      color: #2f7047;
+      padding: 12px 28px;
+      border-radius: 30px;
       font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 6px 10px rgba(163, 214, 138, 0.5);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #91c97e;
+      box-shadow: 0 8px 15px rgba(145, 201, 126, 0.7);
     }
 
-    .btn-buy:hover {
-      background-color: #81c784;
-    }
-
-    /* Hero Section */
+    /* Hero */
     .hero {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      padding: 50px 0;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      justify-content: space-between;
+      padding: 80px 0;
+      gap: 48px;
     }
-
     .hero-text {
-      flex: 1 1 500px;
-      padding: 20px;
+      flex: 1 1 540px;
     }
-
     .hero-text h1 {
-      font-size: 2.8rem;
-      color: #2a6f37;
-      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 18px;
+      color: #2f7047;
+      line-height: 1.1;
     }
-
     .hero-text p {
+      font-size: 1.25rem;
+      margin-bottom: 32px;
+      color: #555;
+    }
+    .hero-text .btn-primary {
       font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #4a4a4a;
+      padding: 16px 40px;
     }
-
-    .hero-text .btn-buy {
-      font-size: 1.1rem;
-      padding: 14px 30px;
-    }
-
     .hero-image {
-      flex: 1 1 450px;
+      flex: 1 1 520px;
       text-align: center;
     }
-
     .hero-image img {
       max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(42, 111, 55, 0.25);
+      border-radius: 20px;
+      box-shadow: 0 16px 40px rgba(47, 112, 71, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .hero-image img:hover {
+      transform: scale(1.05);
     }
 
     /* Benefits Section */
     .benefits {
-      margin: 60px 0;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    .benefit {
       background: white;
-      border-radius: 12px;
-      width: 220px;
-      padding: 25px;
-      margin: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      padding: 60px 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 32px;
       text-align: center;
-      transition: transform 0.3s ease;
     }
-
+    .benefit {
+      padding: 20px;
+      border-radius: 15px;
+      transition: background 0.3s ease;
+    }
     .benefit:hover {
-      transform: translateY(-8px);
+      background: #e6f3df;
     }
-
     .benefit-icon {
-      font-size: 3rem;
-      color: #2a6f37;
-      margin-bottom: 15px;
+      font-size: 3.8rem;
+      margin-bottom: 16px;
+      color: #2f7047;
     }
-
     .benefit h3 {
-      font-size: 1.3rem;
+      font-weight: 700;
+      font-size: 1.35rem;
       margin-bottom: 10px;
-      color: #2a6f37;
+      color: #2f7047;
     }
-
     .benefit p {
       font-size: 1rem;
-      color: #555;
+      color: #444;
+    }
+
+    /* Purchase Section */
+    .purchase {
+      background: #a3d68a;
+      color: #2f7047;
+      padding: 60px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 35px rgba(163, 214, 138, 0.4);
+      max-width: 700px;
+      margin: 0 auto 80px auto;
+      text-align: center;
+    }
+    .purchase h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+    }
+    .purchase p {
+      font-size: 1.15rem;
+      margin-bottom: 32px;
+    }
+    .purchase form {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .purchase label {
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .purchase input[type=number] {
+      width: 80px;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border-radius: 12px;
+      border: none;
+      text-align: center;
+      box-shadow: inset 2px 2px 6px rgba(0,0,0,0.1);
+      appearance: textfield;
+    }
+    .purchase input[type=number]::-webkit-inner-spin-button,
+    .purchase input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .purchase button {
+      background: #2f7047;
+      color: white;
+      border: none;
+      padding: 16px 48px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: background 0.3s ease;
+    }
+    .purchase button:hover {
+      background: #245934;
     }
 
     /* Testimonials */
     .testimonials {
-      background-color: #e8f5e9;
-      padding: 50px 20px;
-      border-radius: 12px;
-      margin-bottom: 60px;
+      max-width: 900px;
+      margin: 0 auto 80px auto;
+      padding: 0 24px;
     }
-
     .testimonials h2 {
       text-align: center;
-      color: #2a6f37;
-      margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 48px;
+      color: #2f7047;
     }
-
-    .testimonial-item {
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    .testimonial-slider {
       display: flex;
-      align-items: center;
-      gap: 15px;
+      overflow-x: auto;
+      gap: 30px;
+      scroll-behavior: smooth;
+      padding-bottom: 20px;
     }
-
-    .testimonial-item img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .testimonial-content {
-      flex: 1;
-    }
-
-    .testimonial-content p {
-      font-style: italic;
-      margin-bottom: 8px;
-    }
-
-    .stars {
-      color: #fbc02d;
-      font-size: 1.2rem;
-    }
-
-    /* Certifications */
-    .certifications {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .certifications img {
-      width: 120px;
-      margin: 0 20px;
-      vertical-align: middle;
-    }
-
-    /* Contact Form */
-    .contact {
+    .testimonial {
+      flex: 0 0 320px;
       background: white;
-      padding: 40px 20px;
-      border-radius: 12px;
-      max-width: 700px;
-      margin: auto;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-    }
-
-    .contact h2 {
-      color: #2a6f37;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .contact form {
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      position: relative;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-    }
-
-    .contact label {
-      font-weight: 600;
-      color: #2a6f37;
-    }
-
-    .contact input, 
-    .contact textarea {
-      padding: 12px;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      font-size: 1rem;
-      resize: vertical;
-    }
-
-    .contact button {
-      background-color: #2a6f37;
-      color: white;
-      padding: 15px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact button:hover {
-      background-color: #1b4722;
-    }
-
-    /* WhatsApp Button */
-    .whatsapp-btn {
-      background-color: #25d366;
-      color: white;
+      align-items: center;
       text-align: center;
-      padding: 15px;
-      border-radius: 25px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-top: 15px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      gap: 16px;
     }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebe57;
+    .testimonial img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .testimonial p {
+      font-style: italic;
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .stars {
+      color: #a3d68a;
+      font-size: 1.2rem;
+    }
+    .testimonial h4 {
+      margin: 0;
+      font-weight: 700;
+      color: #2f7047;
+      font-size: 1.1rem;
     }
 
     /* Footer */
     footer {
-      background-color: #2a6f37;
-      color: white;
+      background: #2f7047;
+      color: #a3d68a;
+      padding: 40px 24px;
       text-align: center;
-      padding: 20px 10px;
+      font-size: 0.9rem;
+      font-family: 'Montserrat', sans-serif;
     }
-
     footer a {
-      color: #a5d6a7;
-      margin: 0 10px;
-      font-size: 1.3rem;
-      vertical-align: middle;
+      color: #a3d68a;
+      margin: 0 12px;
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: #fff;
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .hero {
         flex-direction: column;
+        text-align: center;
       }
-
+      .hero-text, .hero-image {
+        flex: none;
+      }
       .benefits {
-        justify-content: center;
+        grid-template-columns: 1fr;
+      }
+      .purchase form {
+        flex-direction: column;
+      }
+      .purchase input[type=number] {
+        width: 100%;
+        max-width: 200px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header class="container">
     <div class="logo">Paradise Shop México</div>
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Productos</a>
-      <a href="#">Blog</a>
-      <a href="#">Contacto</a>
-      <a href="#" class="btn-buy">Compra Ahora</a>
+      <a href="#benefits">Beneficios</a>
+      <a href="#purchase">Comprar</a>
+      <a href="#testimonials">Testimonios</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero container" aria-label="Hero section">
+  <section class="hero container" aria-label="Presentación Aceite de CBD Premium Paradise Shop">
     <div class="hero-text">
-      <h1>Bienestar natural con Aceite de CBD Premium</h1>
-      <p>Alivio, relajación y salud en cada gota</p>
-      <a href="#" class="btn-buy" aria-label="Compra con 15% de descuento">Compra con 15% de descuento</a>
+      <h1>Aceite de CBD Premium</h1>
+      <p>Descubre el poder natural del cáñamo con nuestro aceite de CBD 100% orgánico, para bienestar y equilibrio diario.</p>
+      <a href="#purchase" class="btn-primary" role="button">Comprar Ahora</a>
     </div>
     <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1611080623490-21a4eac5a4e9?auto=format&fit=crop&w=600&q=80" alt="Botella de aceite de CBD con hojas de cáñamo" />
+      <img src="https://cdn.pixabay.com/photo/2020/05/10/17/39/cbd-5150299_1280.jpg" alt="Botella de Aceite de CBD de Paradise Shop México" />
     </div>
   </section>
 
-  <!-- Benefits -->
-  <section class="benefits container" aria-label="Beneficios del producto">
-    <article class="benefit">
-      <div class="benefit-icon">🧘‍♂️</div>
-      <h3>Reduce estrés y ansiedad</h3>
-      <p>Alivia la mente y ayuda a mantener el equilibrio emocional.</p>
+  <section id="benefits" class="benefits" aria-label="Beneficios del Aceite de CBD">
+    <article class="benefit" tabindex="0">
+      <div class="benefit-icon">🌿</div>
+      <h3>100% Natural y Orgánico</h3>
+      <p>Ingredientes seleccionados cuidadosamente para ofrecer un producto libre de químicos y tóxicos.</p>
     </article>
-    <article class="benefit">
-      <div class="benefit-icon">🌙</div>
-      <h3>Mejora el sueño</h3>
-      <p>Promueve un descanso profundo y reparador para recargar energías.</p>
+    <article class="benefit" tabindex="0">
+      <div class="benefit-icon">🛡️</div>
+      <h3>Certificado y Seguro</h3>
+      <p>Cumplimos con todos los estándares de calidad y certificaciones nacionales e internacionales.</p>
     </article>
-    <article class="benefit">
-      <div class="benefit-icon">💪</div>
-      <h3>Propiedades antiinflamatorias</h3>
-      <p>Reduce inflamaciones y molestias físicas de manera natural.</p>
+    <article class="benefit" tabindex="0">
+      <div class="benefit-icon">⚡</div>
+      <h3>Alivio Natural Rápido</h3>
+      <p>Fomenta el equilibrio de tu cuerpo y mente, ayudando a reducir estrés, ansiedad y molestias.</p>
     </article>
-    <article class="benefit">
-      <div class="benefit-icon">✔️</div>
-      <h3>Libre de THC y 100% legal</h3>
-      <p>Producto certificado, seguro y totalmente legal en México.</p>
+    <article class="benefit" tabindex="0">
+      <div class="benefit-icon">🚚</div>
+      <h3>Envío Gratis en CDMX</h3>
+      <p>Recibe tu pedido en tiempo récord con nuestro servicio de entrega sin costo en Ciudad de México.</p>
     </article>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials" aria-label="Testimonios de clientes">
-    <h2>Lo que dicen nuestros clientes</h2>
-
-    <article class="testimonial-item">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Foto de cliente Ana" />
-      <div class="testimonial-content">
-        <p>"Este aceite me ayudó a dormir mejor desde la primera semana. ¡Lo recomiendo mucho!"</p>
-        <div class="stars">★★★★★</div>
-      </div>
-    </article>
-
-    <article class="testimonial-item">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de cliente Carlos" />
-      <div class="testimonial-content">
-        <p>"Perfecto para aliviar el estrés después del trabajo. Muy efectivo y natural."</p>
-        <div class="stars">★★★★★</div>
-      </div>
-    </article>
-
-  </section>
-
-  <!-- Certifications -->
-  <section class="certifications container" aria-label="Certificaciones y seguridad">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/ISO_9001_Logo.svg/1200px-ISO_9001_Logo.svg.png" alt="Certificación ISO 9001" title="Certificación ISO 9001" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/SEMARNAT_logo.svg/1200px-SEMARNAT_logo.svg.png" alt="Certificación SEMARNAT" title="Certificación SEMARNAT" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/COFEPRIS_logo.svg/1200px-COFEPRIS_logo.svg.png" alt="Certificación COFEPRIS" title="Certificación COFEPRIS" />
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact container" aria-label="Formulario de contacto">
-    <h2>¿Tienes dudas? Contáctanos</h2>
-    <form>
-      <label for="name">Nombre</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Enviar mensaje</button>
+  <section id="purchase" class="purchase" aria-label="Sección de compra del Aceite de CBD Premium">
+    <h2>Compra tu Aceite de CBD Hoy</h2>
+    <p>Garantía de satisfacción o te devolvemos tu dinero. ¡No esperes más para sentir el cambio!</p>
+    <form action="#" method="POST" aria-label="Formulario de compra">
+      <label for="quantity">Cantidad:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" />
+      <button type="submit">Agregar al carrito</button>
     </form>
-
-    <a href="https://wa.me/5215551234567" target="_blank" class="whatsapp-btn" aria-label="Contactar por WhatsApp">Contactar por WhatsApp</a>
   </section>
 
-  <!-- Footer -->
+  <section id="testimonials" class="testimonials" aria-label="Testimonios de clientes satisfechos">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonial-slider" role="list">
+      <article class="testimonial" role="listitem" tabindex="0">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Foto de cliente Ana G." />
+        <p>"Desde que uso el aceite de Paradise Shop, mi ansiedad disminuyó y mi sueño mejoró mucho."</p>
+        <div class="stars" aria-label="Valoración 5 estrellas">⭐⭐⭐⭐⭐</div>
+        <h4>Ana G.</h4>
+      </article>
+      <article class="testimonial" role="listitem" tabindex="0">
+        <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Foto de cliente Carlos R." />
+        <p>"Producto de excelente calidad, envío rápido y atención amable. Totalmente recomendable."</p>
+        <div class="stars" aria-label="Valoración 5 estrellas">⭐⭐⭐⭐⭐</div>
+        <h4>Carlos R.</h4>
+      </article>
+      <article class="testimonial" role="listitem" tabindex="0">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto de cliente Lucía M." />
+        <p>"Me ha ayudado mucho con mis dolores crónicos, me siento mucho mejor cada día."</p>
+        <div class="stars" aria-label="Valoración 4 estrellas">⭐⭐⭐⭐☆</div>
+        <h4>Lucía M.</h4>
+      </article>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Paradise Shop México. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Paradise Shop México. Todos los derechos reservados.</p>
     <p>
-      <a href="#" aria-label="Facebook"><span>👍</span></a>
-      <a href="#" aria-label="Instagram"><span>📸</span></a>
-      <a href="#" aria-label="TikTok"><span>🎵</span></a>
+      Síguenos en
+      <a href="#" aria-label="Facebook">Facebook</a> |
+      <a href="#" aria-label="Instagram">Instagram</a> |
+      <a href="#" aria-label="Twitter">Twitter</a>
     </p>
   </footer>
 
