@@ -69,6 +69,51 @@
       background: #91c97e;
       box-shadow: 0 8px 15px rgba(145, 201, 126, 0.7);
     }
+    /* Estilo general del navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2b7a2b;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #7cd77c;
+}
+
+/* Compensar el espacio que ocupa el navbar fijo */
+body {
+  padding-top: 80px;
+}
+
 
     /* Hero */
     .hero {
@@ -353,14 +398,16 @@
 </head>
 <body>
 
-  <header class="container">
-    <div class="logo">Paradise Shop México</div>
-    <nav>
+  <header class="navbar">
+  <div class="navbar-container">
+    <div class="logo">🌿 Paradise Shop México</div>
+    <nav class="nav-links">
       <a href="#benefits">Beneficios</a>
       <a href="#purchase">Comprar</a>
       <a href="#testimonials">Testimonios</a>
     </nav>
-  </header>
+  </div>
+</header>
 
   <section class="hero container" aria-label="Presentación Aceite de CBD Premium Paradise Shop">
     <div class="hero-text">
